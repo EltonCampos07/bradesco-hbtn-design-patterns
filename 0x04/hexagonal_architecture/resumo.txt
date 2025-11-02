@@ -1,0 +1,39 @@
+A Arquitetura Hexagonal, também conhecida como Ports and Adapters, foi criada por Alistair Cockburn no início dos anos 2000.
+
+Seu principal objetivo é desacoplar o núcleo da aplicação (regras de negócio) das dependências externas, como bancos de dados, frameworks, interfaces gráficas ou APIs. 
+
+A ideia central é que o sistema tenha uma estrutura flexível, onde o núcleo não dependa diretamente da infraestrutura, permitindo que qualquer tecnologia possa ser substituída sem afetar o domínio principal.
+
+Essa arquitetura é chamada de “hexagonal” porque é representada por um hexágono que simboliza a independência entre as partes do sistema. No centro está o domínio da aplicação, e nas bordas estão os portos (ports) e adaptadores (adapters).
+
+Ports são interfaces que definem como o sistema interage com o mundo externo.
+
+Adapters são implementações concretas dessas interfaces, que conectam o domínio a tecnologias específicas, como bancos de dados, filas de mensagens, ou REST APIs.
+
+Benefícios e recursos
+
+A Arquitetura Hexagonal oferece diversos benefícios:
+
+Alta testabilidade, Facilidade de manutenção e evolução, Baixo acoplamento e alta coesão, Maior flexibilidade tecnológica e Reuso de lógica de negócio.
+
+Diferenças entre Arquitetura Hexagonal e Clean Architecture
+
+Embora muito semelhantes em propósito, existem diferenças sutis:
+
+A Arquitetura Hexagonal foca em isolar o domínio por meio de ports e adapters, enquanto a Clean Architecture (de Robert C. Martin) define camadas concêntricas com regras explícitas de dependência, onde o fluxo sempre vai do externo para o interno.
+
+A Clean Architecture é mais detalhada e prescritiva, enquanto a Hexagonal é mais simples e pragmática, servindo como base para outras variações (como Onion Architecture).
+
+Em resumo, a Hexagonal é uma implementação prática dos princípios que a Clean Architecture sistematizou.
+
+Aplicabilidade e considerações
+
+A Arquitetura Hexagonal pode ser usada em diversos tipos de projeto, mas é especialmente útil em sistemas de médio e grande porte, com regras de negócio complexas e integração com múltiplos serviços.
+
+Para utilizá-la é importante considerar:
+
+O tamanho e complexidade do projeto (pequenos sistemas podem não se beneficiar tanto).
+
+A experiência da equipe com princípios de arquitetura e interfaces.
+
+A necessidade de flexibilidade tecnológica e testabilidade.
